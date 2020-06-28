@@ -1,8 +1,50 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="main.java.controllers.MainController"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="26.0" prefWidth="1000.0" style="-fx-background-color: #F1F1F1;" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow color="#00000044" />
+         </effect>
+         <children>
+            <JFXButton layoutX="935.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="30.0" text="">
+               <graphic>
+                  <ImageView fx:id="collapse" fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/minus.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="close" layoutX="965.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="35.0" text="">
+               <graphic>
+                  <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="674.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="674.0" prefWidth="90.0" style="-fx-background-color: #456F92;">
+               <effect>
+                  <DropShadow color="#00000032" />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="90.0" prefHeight="675.0" prefWidth="910.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
