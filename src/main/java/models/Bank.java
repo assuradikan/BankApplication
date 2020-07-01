@@ -15,7 +15,12 @@ public class Bank implements Observable {
 
 
     public Bank(){
-        observers = new LinkedList<>();
+        this.observers = new LinkedList<>();
+        this.clients = new HashMap<>();
+        this.companies = new HashMap<>();
+        this.accounts = new HashMap<>();
+        this.transactions = new HashSet<>();
+        this.histories = new ArrayList<>();
     }
 
     @Override

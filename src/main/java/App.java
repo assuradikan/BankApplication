@@ -16,6 +16,9 @@ public class App extends Application {
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
+
+        scene.setFill(Color.TRANSPARENT);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setTitle("Development 1.1.0");
         primaryStage.setScene(scene);
         primaryStage.show();
