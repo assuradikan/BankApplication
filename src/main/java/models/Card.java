@@ -16,6 +16,8 @@ public class Card extends Account {
         setExpiration_date(opening_date.plusMonths(duration_month));
     }
 
+
+
     public String getCard_number() {
         return card_number;
     }

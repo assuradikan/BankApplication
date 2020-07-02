@@ -1,0 +1,5 @@
+.list-view, .split-pane { -fx-background-insets: 0; -fx-padding: 0; }
+
+.list-cell{
+    -fx-font-size: 20.0;
+}

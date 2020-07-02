@@ -1,0 +1,59 @@
+2457
+Kcell
+1456668
+Mobile phone company
+
+2458
+Activ
+1456669
+Mobile phone company
+
+2459
+Beeline
+1456610
+Mobile phone company
+
+2460
+Kazakhtelecom
+1456710
+TV and Internet
+
+2474
+AlmaTV
+1456740
+TV and Internet
+
+2471
+IDTV
+1456711
+TV and Internet
+
+2475
+Megaline
+1456745
+TV and Internet
+
+2496
+Megogo
+1456741
+Online cinema
+
+2472
+SDU
+1456456
+Education
+
+2463
+Daryn
+1456954
+Education
+
+2852
+Itest
+1457495
+Education
+
+2456
+Imektep
+1456235
+Education

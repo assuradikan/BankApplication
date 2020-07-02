@@ -16,25 +16,26 @@ import java.util.ResourceBundle;
 
 public class MainController extends MainView implements Initializable {
 
-    @FXML private JFXButton btn1, btn2, btn3, btn4, btn5;
+    @FXML private JFXButton btn1, btn2, btn3, btn4;
     @FXML private JFXButton hide_btn, close_btn;
     @FXML private AnchorPane header_pane;
 
-    private AnchorPane p1, p2, p3, p4, p5;
+    private AnchorPane p1, p2, p3, p4;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Controller.addDraggableNode(header_pane);
         try {
-            p1 = get_content("dashboard.fxml");
-            p2 = get_content("mybank.fxml");
-            p3 = get_content("payments.fxml");
-            p4 = get_content("transfer.fxml");
-            p5 = get_content("message.fxml");
+            p1 = get_content("mybank.fxml");
+            p2 = get_content("payments.fxml");
+            p3 = get_content("transfer.fxml");
+            p4 = get_content("message.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
+        bank.load();
+        bank.notifyObservers(201, "Loaded");
         content_pane.getChildren().addAll(p1);
     }
 
@@ -62,7 +63,6 @@ public class MainController extends MainView implements Initializable {
         else if (event.getSource() == btn2) content_pane.getChildren().addAll(p2);
         else if (event.getSource() == btn3) content_pane.getChildren().addAll(p3);
         else if (event.getSource() == btn4) content_pane.getChildren().addAll(p4);
-        else if (event.getSource() == btn5) content_pane.getChildren().addAll(p5);
     }
 
 

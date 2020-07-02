@@ -1,8 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="674.0" prefWidth="910.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.PaymentsController">
-
+<AnchorPane prefHeight="674.0" prefWidth="910.0" style="-fx-background-color: #fbfdfd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.PaymentsController">
+    <children>
+        <AnchorPane prefHeight="83.0" prefWidth="910.0" style="-fx-background-color: white;">
+            <children>
+                <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="753.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/user.png" />
+                    </image>
+                </ImageView>
+                <AnchorPane fx:id="p1_2" layoutX="811.0" layoutY="13.0" prefHeight="48.0" prefWidth="85.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label fx:id="l1_2" alignment="CENTER" layoutY="4.0" prefHeight="21.0" prefWidth="85.0" text="Baltabay" />
+                        <JFXButton layoutY="27.0" onAction="#sign_out" prefHeight="31.0" prefWidth="85.0" text="Sign out" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="p2_2" layoutX="811.0" layoutY="21.0" prefHeight="48.0" prefWidth="85.0" style="-fx-background-color: white;">
+                    <children>
+                        <JFXButton layoutY="6.0" onAction="#sign_in" prefHeight="31.0" prefWidth="85.0" text="Sign in" />
+                    </children>
+                </AnchorPane>
+            </children>
+            <effect>
+                <DropShadow color="#00000035" />
+            </effect>
+        </AnchorPane>
+      <Pane fx:id="p2" layoutX="11.0" layoutY="111.0" prefHeight="557.0" prefWidth="893.0" style="-fx-background-color: #fbfdfd;">
+         <children>
+            <Label fx:id="l1" layoutX="429.0" layoutY="19.0" text="Label" />
+            <JFXButton fx:id="back_btn" layoutX="14.0" layoutY="14.0" onAction="#back" text="Back" />
+            <Pane layoutX="293.0" layoutY="86.0" prefHeight="426.0" prefWidth="286.0">
+               <children>
+                  <JFXTextField fx:id="f1" layoutX="10.5" prefHeight="48.0" prefWidth="275.0" promptText="Number">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="f2" layoutX="10.5" layoutY="67.0" prefHeight="48.0" prefWidth="275.0" promptText="Number" text="Amount">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="f3" layoutX="10.5" layoutY="183.0" prefHeight="48.0" prefWidth="275.0" promptText="Account" />
+                  <JFXToggleButton fx:id="tbtn" layoutX="0.5" layoutY="264.0" onMouseDragEntered="#test1" onMouseDragExited="#test2" text="Spend Bonus" />
+                  <Label fx:id="l2" alignment="CENTER_RIGHT" layoutX="194.5" layoutY="281.0" prefHeight="21.0" prefWidth="91.0" text="Label">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="11.0" layoutY="364.0" onAction="#pay" prefHeight="48.0" prefWidth="275.0" style="-fx-background-color: #E3E9ED;" text="Pay" />
+                  <Label fx:id="l3" layoutX="14.0" layoutY="324.0" prefHeight="21.0" prefWidth="91.0" text="Label">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane fx:id="p1" layoutX="11.0" layoutY="111.0">
+         <children>
+            <ScrollPane prefHeight="557.0" prefWidth="893.0" style="-fx-background-color: transparent;" stylesheets="@../css/scrollbar.css" vbarPolicy="ALWAYS">
+               <content>
+                  <GridPane fx:id="gridpane" hgap="10.0" prefHeight="539.0" prefWidth="872.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="584.0" minWidth="10.0" prefWidth="284.0" />
+                    </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+    </children>
 </AnchorPane>

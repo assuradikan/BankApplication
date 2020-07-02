@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane prefHeight="674.0" prefWidth="910.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.MessageController">
-
+<AnchorPane prefHeight="674.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.MessageController">
+    <children>
+        <AnchorPane prefHeight="83.0" prefWidth="910.0" style="-fx-background-color: white;">
+            <children>
+                <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="753.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/user.png" />
+                    </image>
+                </ImageView>
+                <AnchorPane fx:id="p1_2" layoutX="811.0" layoutY="13.0" prefHeight="48.0" prefWidth="85.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label fx:id="l1_2" alignment="CENTER" layoutY="4.0" prefHeight="21.0" prefWidth="85.0" text="Baltabay" />
+                        <JFXButton layoutY="27.0" onAction="#sign_out" prefHeight="31.0" prefWidth="85.0" text="Sign out" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="p2_2" layoutX="811.0" layoutY="21.0" prefHeight="48.0" prefWidth="85.0" style="-fx-background-color: white;">
+                    <children>
+                        <JFXButton layoutY="6.0" onAction="#sign_in" prefHeight="31.0" prefWidth="85.0" text="Sign in" />
+                    </children>
+                </AnchorPane>
+            </children>
+            <effect>
+                <DropShadow color="#00000035" />
+            </effect>
+        </AnchorPane>
+      <Pane layoutX="44.0" layoutY="112.0" prefHeight="510.0" prefWidth="589.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <ListView fx:id="list_view" layoutY="33.0" prefHeight="477.0" prefWidth="589.0" stylesheets="@../css/listview.css" />
+            <Label layoutX="8.0" layoutY="4.0" text="Messages" textFill="#838383" />
+         </children>
+      </Pane>
+    </children>
 </AnchorPane>

@@ -16,6 +16,15 @@ public class Client implements Customer{
         this.phone = phone;
     }
 
+    public Client(int client_id, String name, String surname, String email, String phone, boolean has_card) {
+        this.client_id = client_id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phone = phone;
+        this.has_card = has_card;
+    }
+
     public int getId() {
         return client_id;
     }

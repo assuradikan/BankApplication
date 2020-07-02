@@ -19,6 +19,16 @@ public class Account<T extends Customer> extends Service {
         this.bonus_balance = 0.0;
     }
 
+    public Account(int id, T owner, String type, double balance, LocalDate opening_date, LocalDate expiration_date) {
+        super(id);
+        this.balance = balance;
+        this.type = type;
+        this.owner = owner;
+        this.opening_date = opening_date;
+        this.expiration_date = expiration_date;
+        this.bonus_balance = 0.0;
+    }
+
     public Account(int id, T owner, String type, double balance, LocalDate opening_date, double bonus_balance) {
         super(id);
         this.balance = balance;

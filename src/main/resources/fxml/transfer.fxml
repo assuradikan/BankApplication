@@ -1,8 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="674.0" prefWidth="910.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.TransfersController">
-
+<?import javafx.scene.control.Label?>
+<AnchorPane prefHeight="674.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.TransfersController">
+    <children>
+        <AnchorPane prefHeight="83.0" prefWidth="910.0" style="-fx-background-color: white;">
+            <children>
+                <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="753.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/user.png" />
+                    </image>
+                </ImageView>
+                <AnchorPane fx:id="p1_2" layoutX="811.0" layoutY="13.0" prefHeight="48.0" prefWidth="85.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label fx:id="l1_2" alignment="CENTER" layoutY="4.0" prefHeight="21.0" prefWidth="85.0" text="Baltabay" />
+                        <JFXButton layoutY="27.0" onAction="#sign_out" prefHeight="31.0" prefWidth="85.0" text="Sign out" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="p2_2" layoutX="811.0" layoutY="21.0" prefHeight="48.0" prefWidth="85.0" style="-fx-background-color: white;">
+                    <children>
+                        <JFXButton layoutY="6.0" onAction="#sign_in" prefHeight="31.0" prefWidth="85.0" text="Sign in" />
+                    </children>
+                </AnchorPane>
+            </children>
+            <effect>
+                <DropShadow color="#00000035" />
+            </effect>
+        </AnchorPane>
+      <AnchorPane layoutX="63.0" layoutY="239.0" prefHeight="83.0" prefWidth="346.0">
+         <children>
+            <JFXTextField alignment="CENTER" prefHeight="60.0" prefWidth="75.0" promptText="xxxx">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" layoutX="90.0" prefHeight="60.0" prefWidth="75.0" promptText="xxxx">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" layoutX="180.0" prefHeight="60.0" prefWidth="75.0" promptText="xxxx">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" layoutX="270.0" prefHeight="60.0" prefWidth="75.0" promptText="xxxx">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="503.0" layoutY="239.0" prefHeight="83.0" prefWidth="346.0">
+         <children>
+            <JFXTextField alignment="CENTER" prefHeight="60.0" prefWidth="75.0" promptText="xxxx">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" layoutX="90.0" prefHeight="60.0" prefWidth="75.0" promptText="xxxx">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" layoutX="180.0" prefHeight="60.0" prefWidth="75.0" promptText="xxxx">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" layoutX="270.0" prefHeight="60.0" prefWidth="75.0" promptText="xxxx">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <JFXTextField alignment="CENTER" layoutX="363.0" layoutY="388.0" prefHeight="45.0" prefWidth="184.0" promptText="Amount">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="46.0" fitWidth="46.0" layoutX="432.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/next.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="405.0" layoutY="520.0" style="-fx-background-color: #E3E9ED;" text="Transfer">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+    </children>
 </AnchorPane>
